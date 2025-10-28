@@ -1,0 +1,229 @@
+/* 🌸 Gaya utama halaman */
+body {
+  background: linear-gradient(135deg, #ffe6f0, #ffd6eb, #fff0f5);
+  font-family: "Poppins", sans-serif;
+  color: #ff1493;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+}
+
+/* 🌷 Judul */
+h1 {
+  font-size: 2.2rem;
+  color: #ff4da6;
+  text-shadow: 1px 1px 2px #fff;
+  animation: fadeInDown 1.5s ease;
+  margin-bottom: 20px;
+}
+
+/* 💕 Kartu kutipan */
+.card {
+  background-color: #fff;
+  border: 2px solid #ffb6c1;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(255, 182, 193, 0.5);
+  max-width: 500px;
+  animation: fadeInUp 1.5s ease;
+}
+
+/* 🌺 Header kartu */
+.card-header {
+  background-color: #ffb6c1;
+  color: white;
+  font-weight: bold;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  letter-spacing: 1px;
+}
+
+/* 🩷 Isi kartu */
+.card-body {
+  padding: 25px;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #d63384;
+}
+
+/* 💞 Kutipan */
+.blockquote p {
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+/* 🌹 Footer kutipan */
+.blockquote-footer {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #a64d79;
+}
+
+/* ✨ Animasi */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.btn-primary {
+  background-color: #ff69b4 !important;
+  border-color: #ff69b4 !important;
+  color: white !important;
+}
+
+.btn-primary:hover {
+  background-color: #ff1493 !important;
+  border-color: #ff1493 !important;
+}
+
+:root {
+  --bg: #f6f7fb;
+  --card: #ffffff;
+  --accent: #4f46e5;
+  --muted: #6b7280;
+  --weekday: #111827;
+  --special: #ec4899; /* pink untuk tanggal 9 */
+  --special-hover: #be185d; /* pink tua saat hover */
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, #eef2ff 0%, var(--bg) 100%);
+  padding: 32px;
+}
+
+.calendar {
+  width: 100%;
+  max-width: 760px;
+  background: var(--card);
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.cal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eef2ff;
+}
+
+.month {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--weekday);
+}
+
+.year {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.legend {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.legend .today {
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.cal-grid {
+  padding: 18px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead th {
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  padding: 10px 6px;
+}
+
+tbody td {
+  height: 86px;
+  vertical-align: top;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+tbody td.empty {
+  background: transparent;
+}
+
+tbody tr td {
+  background: transparent;
+}
+
+tbody td:hover {
+  background: rgba(79, 70, 229, 0.04);
+}
+
+tbody td.weekend .date {
+  color: #dc2626;
+}
+
+.special-day .date {
+  background: var(--special);
+  color: white;
+  transition: background 0.3s ease;
+  text-decoration: none;
+}
+
+.special-day:hover .date {
+  background: var(--special-hover);
+}
+
+.is-today {
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  color: white;
+  padding: 6px 8px;
+  border-radius: 8px;
+}
+
+@media (max-width: 520px) {
+  tbody td {
+    height: 72px;
+    padding: 6px;
+  }
+  .cal-header {
+    padding: 14px;
+  }
+  .month {
+    font-size: 18px;
+  }
+}
